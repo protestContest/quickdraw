@@ -1,0 +1,1 @@
+#include "main.h"#include "graphics.h"void main() {	ToolBoxInit();	WindowInit();	HideCursor();		setup(TickCount());	InstallVBL((DrawPtr) &draw, (DrawPtr) &update);	RestoreMBar();}void ToolBoxInit() {	InitGraf(&thePort);	InitFonts();	InitWindows();	InitMenus();	TEInit();	InitDialogs(nil);	InitCursor();}
